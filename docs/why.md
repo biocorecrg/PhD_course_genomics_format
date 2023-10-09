@@ -6,6 +6,6 @@ navigation: 2
 
 This is the best description of this course:
 
-<a><img src="images/meme_code.jpeg" width="300"/>
+<a><img src="images/meme_code.jpeg" width="600"/>
 
 
