@@ -100,6 +100,11 @@ And read the file using command **more**.
 
 <br/>
 
+Here my suggestion in case you might want to try **VIM**
+
+<img src="images/vim.jpeg" width="300"/>
+
+
 Download a **test dataset** by executing the command **wget**:
 
 ```{bash}
