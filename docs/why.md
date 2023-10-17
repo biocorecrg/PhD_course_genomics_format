@@ -9,6 +9,6 @@ This is the best description of this course I found in the web:
 <br>
 <be>
 
-<a><img src="images/meme_code.jpeg" width="300"/>
+<a><img src="images/meme_code.jpeg" width="400"/>
 
 
