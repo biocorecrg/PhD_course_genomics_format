@@ -183,7 +183,7 @@ The flow of commands is the following:
 **EXERCISE**
 
 Download in the folder ./db the annotation file at https://biocorecrg.github.io/PhD_course_genomics_format_2023/data/annotation.gtf.gz  
- * What date of this file? (use command **more** to explore the file)
+ * What is the date of this file? (use command **more** to explore the file)
  * How many lines in this file?
  * How many lines in this file contain the word "HAVANA"?
  * How many characters the first line of the file contains?
