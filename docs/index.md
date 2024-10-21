@@ -37,7 +37,7 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 
 ## Using GitPod
 You need to have a GitHub account.
-https://gitpod.io/#https://github.com/biocorecrg/PhD_course_genomics_format_2024
+[GITPOD](https://gitpod.io/#https://github.com/biocorecrg/PhD_course_genomics_format_2024)
 
 
 
