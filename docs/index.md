@@ -32,10 +32,13 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 ## Prerequisites 
 * The CRG course "Intro to basic Linux commands".
 
-<br>
-<br>
+<be>
 
-<br>
+
+## Using GitPod
+You need to have a GitHub account.
+https://gitpod.io/#https://github.com/biocorecrg/PhD_course_genomics_format_2024
+
 
 
 
