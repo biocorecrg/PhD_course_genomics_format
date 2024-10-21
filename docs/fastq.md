@@ -47,10 +47,10 @@ It is recommended to always use the date at the beginning of the folder name, in
 <br>
 
 ```{bash}
-mkdir 2023-10-25-genomics_data_formats
+mkdir 2024-10-25-genomics_data_formats
 
 # type cd 2[TAB] to autofill the folder name
-cd 2023-10-25-genomics_data_formats
+cd 2024-10-25-genomics_data_formats
 ```
 
 <br>
@@ -61,7 +61,7 @@ Let's use command **cat** to create a simple README.txt
 
 ```{bash}
 cat > README.txt
-Date: 25/10/2023
+Date: 25/10/2024
 Author: ....
 Project title: This is my first project.
 ```
@@ -108,7 +108,7 @@ Here my suggestion in case you might want to try **VIM**
 Download a **test dataset** by executing the command **wget**:
 
 ```{bash}
-wget https://biocorecrg.github.io/PhD_course_genomics_format_2023/data/H3K4me1_chr21.fq.gz 
+wget https://biocorecrg.github.io/PhD_course_genomics_format_2024/data/H3K4me1_chr21.fq.gz 
 --2019-10-15 14:42:59--  https://biocorecrg.github.io/PhD_course/data/H3K4me1_chr21.fq.gz
 Resolving biocorecrg.github.io (biocorecrg.github.io)... 185.199.109.153, 185.199.111.153, 185.199.110.153, ...
 Connecting to biocorecrg.github.io (biocorecrg.github.io)|185.199.109.153|:443... connected.
@@ -134,7 +134,7 @@ ls -lh H3K4me1_chr21.fq.gz
 <br/>
 
 **EXERCISE**<br/>
-* Download the **control file for this ChIP-seq experiment** at https://biocorecrg.github.io/PhD_course_genomics_format_2023/data/input_chr21.fq.gz <br>
+* Download the **control file for this ChIP-seq experiment** at https://biocorecrg.github.io/PhD_course_genomics_format_2024/data/input_chr21.fq.gz <br>
 * What is the size of the input file?
 * Look up for the options of the command **ls** using the command **man ls**. 
 * Which option in command **ls** allows to display files sorted by size? Run this command.
