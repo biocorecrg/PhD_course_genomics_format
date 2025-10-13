@@ -8,21 +8,20 @@ navigation: 9
 
 Peak calling is the method used to detect regions of the genome **enriched** in mapped reads. Those regions are called **peaks**.<br>
 In brief, the genome is scanned looking for regions where the number of mapped reads is higher than expected by random picking. <br>
-For avoiding false positives, a number of measures are taken such as the **removal of PCR artifacts** and the **detection of "paired peaks"** that are a diagnostic of good peaks. 
+For avoiding false positives, a number of measures are taken such as the **removal of PCR artifacts** and the **detection of "paired peaks"** that are a diagnostic of good peaks.
 
 <img src="images/peak_calling.png" width="800"/>
 
 There are a number of tools available for doing peak calling, one of the most popular being [MACS](https://github.com/macs3-project/MACS).<br>
 For the detailed description about the MACS algorithm see [the original paper](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2008-9-9-r137) and [this course](https://hbctraining.github.io/Intro-to-ChIPseq/lessons/05_peak_calling_macs.html).<br>
 
-The ChIP-Seq reads is normally less than 100 bases but it covers only the ends of the ChIP fragments that is normally longer (between 200 and 400 bps dependings on the sonication size). <br> 
-Since ChIP-DNA fragments are equally likely to be sequenced from both 5' and 3' ends, the read density around a true binding site should show two peaks, one at the 5' and one at 3'. MACS takes advantage of this bimodal pattern to empirically model the **fragment size d** and shifts all reads **d/2** toward the 3' ends. 
+The ChIP-Seq reads is normally less than 100 bases but it covers only the ends of the ChIP fragments that is normally longer (between 200 and 400 bps dependings on the sonication size). <br>
+Since ChIP-DNA fragments are equally likely to be sequenced from both 5' and 3' ends, the read density around a true binding site should show two peaks, one at the 5' and one at 3'. MACS takes advantage of this bimodal pattern to empirically model the **fragment size d** and shifts all reads **d/2** toward the 3' ends.
 
-|MACS|
-| :---:  |
-|<img src="images/macs.png" width="400"/>|
-|Zhang Y et al. Model-based analysis of ChIPSeq (MACS). Genome Biol. 2008;9(9):R137.|
-
+|                                        MACS                                         |
+| :---------------------------------------------------------------------------------: |
+|                      <img src="images/macs.png" width="400"/>                       |
+| Zhang Y et al. Model-based analysis of ChIPSeq (MACS). Genome Biol. 2008;9(9):R137. |
 
 MACS can be easily used either for the ChIP sample alone, or along with a control sample which increases specificity of the peak calls.<br> In the latter case, a **sample** (or, treatment) is immunoprecipitated, while a **control**, is not. <br>
 
@@ -32,12 +31,12 @@ Let's look at one of the output files of MACS, the file **H3K4me_peaks.xls**.
 First let's create the folder to store data on peaks.
 
 ```
-pwd 
+pwd
 cd ..
 mkdir peaks
 cd peaks
 
-wget https://biocorecrg.github.io/PhD_course_genomics_format_2024/data/H3K4me_peaks.xls
+wget https://biocorecrg.github.io/PhD_course_genomics_format/data/H3K4me_peaks.xls
 
 
 more H3K4me_peaks.xls
@@ -77,11 +76,12 @@ chr	start	end	length	abs_summit	pileup	-log10(pvalue)	fold_enrichment	-log10(qva
 21	8438082	8438492	411	8438329	31.00	7.12466	2.77893	2.84380	H3K4me_peak_4
 --More--(42%)
 ```
+
 <br>
 Another output file is **H3K4me_peaks.narrowPeak**, which, as you can see contains the information only about peaks. This is a BED file.
 
 ```{bash}
-wget https://biocorecrg.github.io/PhD_course_genomics_format_2024/data/H3K4me_peaks.narrowPeak
+wget https://biocorecrg.github.io/PhD_course_genomics_format/data/H3K4me_peaks.narrowPeak
 
 more H3K4me_peaks.narrowPeak
 21	6565480	6565885	H3K4me_peak_1	32	.	3.66432	7.98323	3.26622	153
@@ -98,29 +98,29 @@ This tab-separated text format is called **Browser Extensible Data** [(BED)](htt
 
 Here is the description of each column:
 
-| Column number | Column name | Details |
-| ----: | :---- | :---- |
-| 1 | chrom | name of the chromosome or scaffold |
-| 2 | chromStart | The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0 |
-| 3 | chromEnd | The ending position of the feature in the chromosome or scaffold |
-| 4 | name |  Defines the name of the BED line |
-| 5 | score | A score between 0 and 1000 |
-| 6 | strand | Defines the strand. Either "." (=no strand) or "+" or "-" |
-| 7 | thickStart | The starting position at which the feature is drawn thickly |
-| 8 | thickEnd | The ending position at which the feature is drawn thickly |
-| 9 | itemRgb | An RGB value of the form R,G,B (a color code) |
-| 10 | blockCount | The number of blocks (exons) in the BED line |
-| 11 | blockSizes | A comma-separated list of the block sizes |
-| 12 | blockStarts | A comma-separated list of block starts |
+| Column number | Column name | Details                                                                                                          |
+| ------------: | :---------- | :--------------------------------------------------------------------------------------------------------------- |
+|             1 | chrom       | name of the chromosome or scaffold                                                                               |
+|             2 | chromStart  | The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0 |
+|             3 | chromEnd    | The ending position of the feature in the chromosome or scaffold                                                 |
+|             4 | name        | Defines the name of the BED line                                                                                 |
+|             5 | score       | A score between 0 and 1000                                                                                       |
+|             6 | strand      | Defines the strand. Either "." (=no strand) or "+" or "-"                                                        |
+|             7 | thickStart  | The starting position at which the feature is drawn thickly                                                      |
+|             8 | thickEnd    | The ending position at which the feature is drawn thickly                                                        |
+|             9 | itemRgb     | An RGB value of the form R,G,B (a color code)                                                                    |
+|            10 | blockCount  | The number of blocks (exons) in the BED line                                                                     |
+|            11 | blockSizes  | A comma-separated list of the block sizes                                                                        |
+|            12 | blockStarts | A comma-separated list of block starts                                                                           |
 
 In the case of our **narrowPeak** file, the first six fields correspond indeed to the first six fields of a BED file, while the remaining ones are MACS-specific columns:
 
-| Column number | Column name | Details |
-| ----: | :---- | :---- |
-| 7 | fold_enrichment | fold enrichment for the region |
-| 8 | -LOG10(pvalue) | pvalue (-log10) |
-| 9 | -LOG10(qvalue) | qvalue (i.e. false discovery rate) (-log10) |
-| 10 | dist summit | The distance between the summit of the peak and the start |
+| Column number | Column name     | Details                                                   |
+| ------------: | :-------------- | :-------------------------------------------------------- |
+|             7 | fold_enrichment | fold enrichment for the region                            |
+|             8 | -LOG10(pvalue)  | pvalue (-log10)                                           |
+|             9 | -LOG10(qvalue)  | qvalue (i.e. false discovery rate) (-log10)               |
+|            10 | dist summit     | The distance between the summit of the peak and the start |
 
 More on MACS output files can be found [here](https://github.com/taoliu/MACS#output-files).<br>
 
@@ -131,18 +131,17 @@ wc -l H3K4me_peaks.narrowPeak
 
 ```
 
-We can check how many peaks have q-value (in column #9) larger than 0.01 (i.e., -log10(0.01) = 2). 
+We can check how many peaks have q-value (in column #9) larger than 0.01 (i.e., -log10(0.01) = 2).
 
 ```
-awk -F"\t" '{if ($9>=2) print}' H3K4me_peaks.narrowPeak | wc -l 
+awk -F"\t" '{if ($9>=2) print}' H3K4me_peaks.narrowPeak | wc -l
 28
 ```
+
 <br>
 
 **EXERCISE** <br>
- * How many peaks in the file H3K4me_peaks.narrowPeak have fold enrichment larger than 5 ?
 
- 
- 
+- How many peaks in the file H3K4me_peaks.narrowPeak have fold enrichment larger than 5 ?
+
  <br>
-
