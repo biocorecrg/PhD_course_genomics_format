@@ -50,7 +50,7 @@ html_theme_options = {
         },
     ],
     "source_repository": "https://github.com/biocorecrg/PhD_course_genomics_format/",
-    "source_branch": "master",
+    "source_branch": "main",
     "source_directory": "docs/",
 }
 
