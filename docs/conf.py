@@ -53,3 +53,21 @@ html_theme_options = {
     "source_branch": "master",
     "source_directory": "docs/",
 }
+
+import os
+
+from sphinx.util.fileutil import copy_asset
+
+
+def copy_assets(app, exception):
+    if app.builder.name != "html" or exception:
+        return
+    for asset_dir in ["images", "data"]:
+        src = os.path.abspath(asset_dir)
+        dst = os.path.join(app.outdir, asset_dir)
+        if os.path.exists(src):
+            copy_asset(src, dst)
+
+
+def setup(app):
+    app.connect("build-finished", copy_assets)
