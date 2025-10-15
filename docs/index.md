@@ -29,6 +29,7 @@ You need to have a GitHub account.
 
 ```{toctree}
 :hidden:
+:depth: 2
 why.md
 formats.md
 chipseq.md
@@ -40,4 +41,5 @@ alignment.md
 peak_calling.md
 genome_browser.md
 the_end.md
+
 ```
