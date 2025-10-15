@@ -1,9 +1,3 @@
----
-layout: page
-title: Home
-navigation: 1
----
-
 # ![logo](https://raw.githubusercontent.com/CRG-CNAG/BioCoreMiscOpen/master/logo/biocore-logo_small.png) PhD Course 2025
 
 # Linux commands and Genomics data formats for biologists
@@ -32,3 +26,18 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 
 You need to have a GitHub account.
 [GITPOD](https://gitpod.io/#https://github.com/biocorecrg/PhD_course_genomics_format)
+
+```{toctree}
+:hidden:
+why.md
+formats.md
+chipseq.md
+fastq.md
+qc.md
+fasta_format.md
+gtf_format.md
+alignment.md
+peak_calling.md
+genome_browser.md
+the_end.md
+```
