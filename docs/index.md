@@ -30,6 +30,7 @@ You need to have a GitHub account.
 ```{toctree}
 :hidden:
 :depth: 2
+
 why.md
 formats.md
 chipseq.md

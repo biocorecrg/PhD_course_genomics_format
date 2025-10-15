@@ -1,9 +1,3 @@
----
-layout: page
-title: BED format
-navigation: 9
----
-
 # Peak Calling and BED format
 
 Peak calling is the method used to detect regions of the genome **enriched** in mapped reads. Those regions are called **peaks**.<br>

@@ -1,7 +1,3 @@
----
-layout: page
-title: The end
-navigation: 11
----
+# The end
 
 <img src="images/meme_done.jpg" width="500"/>

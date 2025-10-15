@@ -1,9 +1,3 @@
----
-layout: page
-title: Genome Browser
-navigation: 10
----
-
 # Genome Browsers
 
 The genome browsers like [UCSC Genome Browser](https://genome.ucsc.edu/) and [Ensembl](https://www.ensembl.org/index.html) allow to read and display a number of features, such as genomic intervals in different formats.

@@ -1,9 +1,3 @@
----
-layout: page
-title: FASTQ format
-navigation: 4
----
-
 # FASTQ format for sequencing reads
 
 Short (and long) sequencing reads coming from the high throughput sequencers are usually stored in **FASTQ** format (files with an extension **.fastq**).<br/>

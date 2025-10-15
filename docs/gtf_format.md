@@ -1,28 +1,20 @@
----
-layout: page
-title: GTF format
-navigation: 7
----
-
 # General Transfer Format
-
 
 The file we have just downloaded provides information on the genome annotation.
 
 The genomic annotation is stored in **G**eneral **T**ransfer **F**ormat (**GTF**) format (which is an extension of the older **[GFF format](https://genome.ucsc.edu/FAQ/FAQformat.html#format3)**): a tabular format that has a header (rows starting with **"#"**, following by one line per genome feature, each one containing 9 columns of data:<br>
 
-| Column number | Column name | Details |
-| ----: | :---- | :---- |
-| 1 | seqname | name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix. |
-| 2 | source | name of the program that generated this feature, or the data source (database or project name) |
-| 3 | feature | feature type name, e.g. Gene, Variation, Similarity |
-| 4 | start | Start position of the feature, with sequence numbering starting at 1. |
-| 5 | end | End position of the feature, with sequence numbering starting at 1. |
-| 6 | score | A floating point value. |
-| 7 | strand | defined as + (forward) or - (reverse). |
-| 8 | frame | One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on.. |
-| 9 | attribute | A semicolon-separated list of tag-value pairs, providing additional information about each feature. |
-
+| Column number | Column name | Details                                                                                                                                                                   |
+| ------------: | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|             1 | seqname     | name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix.                                                                       |
+|             2 | source      | name of the program that generated this feature, or the data source (database or project name)                                                                            |
+|             3 | feature     | feature type name, e.g. Gene, Variation, Similarity                                                                                                                       |
+|             4 | start       | Start position of the feature, with sequence numbering starting at 1.                                                                                                     |
+|             5 | end         | End position of the feature, with sequence numbering starting at 1.                                                                                                       |
+|             6 | score       | A floating point value.                                                                                                                                                   |
+|             7 | strand      | defined as + (forward) or - (reverse).                                                                                                                                    |
+|             8 | frame       | One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on.. |
+|             9 | attribute   | A semicolon-separated list of tag-value pairs, providing additional information about each feature.                                                                       |
 
 Check the first rows of the annotation file:
 
@@ -43,14 +35,14 @@ chr21	HAVANA	exon	5012548	5012687	.	+	.	gene_id "ENSG00000279493.1"; transcript_
 Let's check how many genes are in the annotation file:
 
 ```{bash}
-zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | wc -l 
+zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | wc -l
 872
 ```
 
 And get a final counts of every feature:
 
 ```{bash}
-zcat annotation.gtf.gz | grep -v "#" | cut -f3 | sort | uniq -c 
+zcat annotation.gtf.gz | grep -v "#" | cut -f3 | sort | uniq -c
 
    7709 CDS
   16659 exon
@@ -64,7 +56,7 @@ zcat annotation.gtf.gz | grep -v "#" | cut -f3 | sort | uniq -c
 How many **protein coding genes** are there?
 
 ```{bash}
-zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | grep "protein_coding" | wc -l 
+zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | grep "protein_coding" | wc -l
 232
 ```
 
@@ -81,8 +73,9 @@ That is why we used the command **cut -d"\""** where backslash (\) is used as an
 
 **EXERCISE**
 <br>
- * How many lncRNA genes are in the file annotation.gtf.gz? 
- 
+
+- How many lncRNA genes are in the file annotation.gtf.gz?
+
 <br>
 TIP: Command **cut** can be used with different one-character separators and applied to different columns many times in a sequence via pipe.
 <br>

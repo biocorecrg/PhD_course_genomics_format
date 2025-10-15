@@ -1,10 +1,4 @@
----
-layout: page
-title: Quality Control
-navigation: 5
----
-
-## QC of sequencing reads
+# QC of sequencing reads
 
 To assess the quality of sequencing data, we will use the program [**FastQC**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
 

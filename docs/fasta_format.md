@@ -1,9 +1,3 @@
----
-layout: page
-title: Fasta format
-navigation: 6
----
-
 # Read alignment to a reference genome
 
 Once sequencing reads quality is ensured, we can proceed with their mapping (aka, alignment) to a reference genome. It will allow us to know to which regions of the reference genome most of the reads aligned to.

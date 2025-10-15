@@ -1,9 +1,3 @@
----
-layout: page
-title: SAM/BAM format
-navigation: 8
----
-
 # Read alignment and SAM format
 
 For mapping of 20-30 million reads to a genome that is around 3 billion bases long, we need a ultra fast aligner (that is, an algorithm for the read mapping) to perform the mapping.
