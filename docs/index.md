@@ -4,9 +4,9 @@
 
 ## Instructors
 
-|                                 [Luca Cozzuto](mailto:luca.cozzuto@crg.eu)                                  |                                 [Toni Hermoso](mailto:toni.hermoso@crg.eu)                                  |                                [Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu)                                |
-| :---------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
-| <a href="https://biocore.crg.eu/wiki/User:Lcozzuto"><img src="_static/pics/lcozzuto.jpg" width="200"/> </a> | <a href="https://biocore.crg.eu/wiki/User:Thermoso"><img src="_static/pics/thermoso.jpg" width="200"/> </a> | <a href="https://biocore.crg.eu/wiki/User:Jponomarenko"><img src="_static/pics/ponomarenko.jpg" width="200"/> </a> |
+|                                 [Luca Cozzuto](mailto:luca.cozzuto@crg.eu)                                 |                                 [Toni Hermoso](mailto:toni.hermoso@crg.eu)                                 |                               [Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu)                                |
+| :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------: |
+| <a href="https://biocore.crg.eu/wiki/User:Lcozzuto"><img src="images/pics/lcozzuto.jpg" width="200"/> </a> | <a href="https://biocore.crg.eu/wiki/User:Thermoso"><img src="images/pics/thermoso.jpg" width="200"/> </a> | <a href="https://biocore.crg.eu/wiki/User:Jponomarenko"><img src="images/pics/ponomarenko.jpg" width="200"/> </a> |
 
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 425, 4th floor of the hospital side)
 
