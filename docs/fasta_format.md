@@ -45,7 +45,7 @@ cd ../ # to go to the root of the project folder, if needed
 mkdir db
 cd db
 
-wget https://biocorecrg.github.io/PhD_course_genomics_format/data/Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
+wget https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 ```
 
 The genome is generally represented as a FASTA file (.fa file). Each chromosome sequence starts with a header row, starting with "**>**":
@@ -175,7 +175,7 @@ The flow of commands is the following:
 
 **EXERCISE**
 
-Download in the folder ./db the annotation file at https://biocorecrg.github.io/PhD_course_genomics_format/data/annotation.gtf.gz
+Download in the folder ./db the annotation file at https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/annotation.gtf.gz
 
 - What is the date of this file? (use command **more** to explore the file)
 - How many lines in this file?
