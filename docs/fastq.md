@@ -41,7 +41,7 @@ Let's start with creating the folder for our project, using the command **mkdir*
 It is recommended to always use the date at the beginning of the folder name, in the format YYYY-MM-DD:
 <br>
 
-```{bash}
+```bash
 mkdir 2025-10-22-genomics_data_formats
 
 # type cd 2[TAB] to autofill the folder name
@@ -54,7 +54,7 @@ It is also a good practice to write README.txt in the root of your project folde
 
 Let's use command **cat** to create a simple README.txt
 
-```{bash}
+```bash
 cat > README.txt
 Date: 22/10/2025
 Author: ....
@@ -72,7 +72,7 @@ To quit command **more**, use the key **Q** on the keyboard.<br/><br/>
 We forgot to write down the goal of the project.
 We can append a new line to an existing file using **cat** and redirection **>>**:
 
-```{bash}
+```bash
 cat >> README.txt
 Project goal: To learn genomics data formats and never forget to write README!
 ```
@@ -85,7 +85,7 @@ It seems we put the date using an ambiguous notation.
 Let's correct this.
 To edit the file we can use **nano editor** (this is the simplest editor available in any Linux OS).
 
-```{bash}
+```bash
 nano README.txt
 ```
 
@@ -101,7 +101,7 @@ Here my suggestion in case you might want to try **VIM**
 
 Download a **test dataset** by executing the command **wget**:
 
-```{bash}
+```bash
 wget https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_chr21.fq.gz
 --2019-10-15 14:42:59--  https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_chr21.fq.gz
 Resolving biocorecrg.github.io (biocorecrg.github.io)... 185.199.109.153, 185.199.111.153, 185.199.110.153, ...
@@ -120,7 +120,7 @@ Saving to: ‘H3K4me1_chr21.fq.gz’
 
 Now, let's check the **size of the donwloaded file** (the file has an extension **gz** because it was archived using command **gzip**) using command **ls** with options **-l** (use a long listing format) and **-h** (with -l, print sizes in human readable format (e.g., 1K, 234M, 2G)):
 
-```{bash}
+```bash
 ls -lh H3K4me1_chr21.fq.gz
 
 -rw-r--r-- 1 lcozzuto Bioinformatics_Unit 17M Oct 15 14:19 H3K4me1_chr21.fq.gz
@@ -150,7 +150,7 @@ Let's explore the fastq file using the **pipe** and the Linux commands **zcat**,
 
 Command **head** by default outputs the first 10 lines of the file; to output a specified number of lines, we can use the option **-n**:
 
-```{bash}
+```bash
 zcat H3K4me1_chr21.fq.gz | head
 zcat H3K4me1_chr21.fq.gz | head -n 4
 ```
@@ -162,13 +162,13 @@ If you forgot to type pipe and want to stop the command from running type Ctr-C.
 **WARNING**
 Mac users cannot use **zcat** in this way. They need to use a slightly different syntax.
 
-```{bash}
+```bash
 zcat < H3K4me1_chr21.fq.gz | head
 ```
 
 or an alternative
 
-```{bash}
+```bash
 gzip -cd H3K4me1_chr21.fq.gz | head
 ```
 
@@ -187,7 +187,7 @@ While viewing the text file using **more**, use these controls:
 - **Space bar**: To go to the next page.
 - **b key**: To go back one page.
 
-```{bash}
+```bash
 
 zcat H3K4me1_chr21.fq.gz | more
 ```
@@ -196,7 +196,7 @@ zcat H3K4me1_chr21.fq.gz | more
 
 Let's check how many lines are in this file, using command **wc**:
 
-```{bash}
+```bash
 zcat H3K4me1_chr21.fq.gz | wc -l
 
 2089260
@@ -208,7 +208,7 @@ Since the fastq files contains 4 lines per sequence (read), we can calculate the
 
 This can be done, using the **Linux shell variables (they are created using '=' and accessed using '$')** and **bash arithmetic commands** (see [https://www.shell-tips.com/bash/math-arithmetic-calculation/](https://www.shell-tips.com/bash/math-arithmetic-calculation/)):
 
-```{bash}
+```bash
 echo $((10*10-5))
 
 
@@ -230,7 +230,7 @@ $((num/4)); echo $num
 
 Another way to do arithmetic and manipulation with files in Linux is using the scripting language **AWK** (to learn AWK, refer to this tutorial [https://www.tutorialspoint.com/awk/index.htm](https://www.tutorialspoint.com/awk/index.htm)):
 
-```{bash}
+```bash
 zcat H3K4me1_chr21.fq.gz | awk '{num++} END{print num}'
 
 2089260
@@ -245,7 +245,7 @@ zcat H3K4me1_chr21.fq.gz | awk '{num++} END{print num/4}'
 Also, because the header of each read contains the name of the sequencing machine, which is **@D00733** in this file, we can count the number of reads by counting header lines. <br>
 To do so, we first extract header lines containing the name of the machine using command **grep** (caret sign '^' specifies the begining of the line):
 
-```{bash}
+```bash
 zcat H3K4me1_chr21.fq.gz | grep "^@D00733" | wc -l
 ```
 
@@ -255,13 +255,13 @@ To extract **only sequences**, you can proceed using commands **paste** and **cu
 
 To understand the commands output, let's create a file "test", using command **cat**:
 
-```{bash}
+```bash
 cat > test
 ```
 
 Start typing 8 rows of numbers:
 
-```{bash}
+```bash
 1
 2
 3
@@ -277,7 +277,7 @@ When finished typing, close the file, using **Ctrl + D** key combination.
 <br>
 Now you can examine the test file and look at what **paste** and **cut** do:
 
-```{bash}
+```bash
 cat test
 cat test | paste - - - -
 cat test | paste - - - - | cut -f2
@@ -288,7 +288,7 @@ cat test | paste - - - | cut -f3
 
 Now, let's use these commands to extract sequences from fastq file and redirect the output (using **>**) to a newly created file "seq.txt":
 
-```{bash}
+```bash
 zcat H3K4me1_chr21.fq.gz | paste - - - - | cut -f2 > seq.txt
 
 head seq.txt

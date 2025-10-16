@@ -74,7 +74,7 @@ chr	start	end	length	abs_summit	pileup	-log10(pvalue)	fold_enrichment	-log10(qva
 <br>
 Another output file is **H3K4me_peaks.narrowPeak**, which, as you can see contains the information only about peaks. This is a BED file.
 
-```{bash}
+```bash
 wget https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me_peaks.narrowPeak
 
 more H3K4me_peaks.narrowPeak

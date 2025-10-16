@@ -7,7 +7,7 @@ For example, you can load BED and GTF files and display them in the genomic cont
 
 Let's first convert our 9-field bed file in a more standard 6-field one:
 
-```{bash}
+```bash
 cut -f 1-6 H3K4me_peaks.narrowPeak > H3K4me_peaks.bed
 ```
 
@@ -39,7 +39,7 @@ You can also display aligned sequences, but you need to place your sorted and in
 
 Copy paste this link into the **custom track**. This is the sorted version of our alignment, hosted in the github web-server.
 
-```{bash}
+```bash
 https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_s.bam
 ```
 

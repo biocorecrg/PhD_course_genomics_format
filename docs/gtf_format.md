@@ -18,7 +18,7 @@ The genomic annotation is stored in **G**eneral **T**ransfer **F**ormat (**GTF**
 
 Check the first rows of the annotation file:
 
-```{bash}
+```bash
 zcat annotation.gtf.gz | head
 ##description: evidence-based annotation of the human genome (GRCh38), version 32 (Ensembl 98)
 ##provider: GENCODE
@@ -34,14 +34,14 @@ chr21	HAVANA	exon	5012548	5012687	.	+	.	gene_id "ENSG00000279493.1"; transcript_
 
 Let's check how many genes are in the annotation file:
 
-```{bash}
+```bash
 zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | wc -l
 872
 ```
 
 And get a final counts of every feature:
 
-```{bash}
+```bash
 zcat annotation.gtf.gz | grep -v "#" | cut -f3 | sort | uniq -c
 
    7709 CDS
@@ -55,14 +55,14 @@ zcat annotation.gtf.gz | grep -v "#" | cut -f3 | sort | uniq -c
 
 How many **protein coding genes** are there?
 
-```{bash}
+```bash
 zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | grep "protein_coding" | wc -l
 232
 ```
 
 Retrieve all unique **gene IDs** (let's look up for the options of commands cut and sort using man):
 
-```{bash}
+```bash
 zcat annotation.gtf.gz | grep -v "#" | cut -d"\"" -f2 | sort -u > annotation_geneIDs.txt
 ```
 

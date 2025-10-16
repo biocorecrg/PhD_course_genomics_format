@@ -39,7 +39,7 @@ To speed up the mapping process, we already downloaded FASTA file for human v32 
 
 Download it to the folder **db** of your project:
 
-```{bash}
+```bash
 pwd # to check where you are in the folder structure
 cd ../ # to go to the root of the project folder, if needed
 mkdir db
@@ -50,7 +50,7 @@ wget https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/Homo_sa
 
 The genome is generally represented as a FASTA file (.fa file). Each chromosome sequence starts with a header row, starting with "**>**":
 
-```{bash}
+```bash
 zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | head -n 5
 
 >chr21 dna:chromosome chromosome:GRCh38:21:1:46709983:1 REF
@@ -63,7 +63,7 @@ NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 The size of the chromosome (46709983 bp) is already reported in the header, but we can check it using command **wc**.
 <br> Let's first look at **wc** using our test file (created in the section "Fastq format"):
 
-```{bash}
+```bash
 cat test
 1
 2
@@ -80,7 +80,7 @@ wc test
 
 **wc** outputs 3 numbers: the number of lines, the number of words, and the number of characters.
 
-```{bash}
+```bash
 zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | grep -v ">" | wc
 
  778500  778500 47488483
@@ -95,7 +95,7 @@ Our combinations of commands is the following:
 Why the number of characters output by **wc** (47488483) is not equal to the number of base pairs (46709983)? <br>
 Note, the difference:
 
-```{bash}
+```bash
 char=$(zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | grep -v ">" | wc -c)
 echo $char
 47488483
@@ -106,7 +106,7 @@ echo $((char-46709983))
 
 That tells us that every line of the file contains one additional character, which we can see using command **cat -A** (to show special characters):
 
-```{bash}
+```bash
 zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | head -5 | cat -A
 >21 dna:chromosome chromosome:GRCh38:21:1:46709983:1 REF$
 NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN$
@@ -123,7 +123,7 @@ Which option should we use to delete a character?
 
 <br> Let's try it first with the test file:
 
-```{bash}
+```bash
 cat test
 1
 2
@@ -158,7 +158,7 @@ cat test | tr -d '\n' | wc
 
 Now, we can apply these commands to our big file:
 
-```{bash}
+```bash
 zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | grep -v ">" | tr -d '\n' | wc -c
 
 46709983
