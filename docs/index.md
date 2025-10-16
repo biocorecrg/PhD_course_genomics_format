@@ -44,3 +44,5 @@ genome_browser.md
 the_end.md
 
 ```
+
+.. bioschemas:: bioschemas.yaml
