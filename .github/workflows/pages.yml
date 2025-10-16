@@ -42,12 +42,8 @@ jobs:
           else
             cp -r docs/_build/html site/latest
           fi
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v4
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./site
-      #     keep_files: true
+      - name: Copy redirect index.html
+        run: cp docs/index.html site/index.html
       - uses: actions/upload-pages-artifact@v4
         with:
           path: "site"
