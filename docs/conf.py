@@ -10,7 +10,7 @@ project = "Genomics Data Formats"
 copyright = "2022-2025, Centre for Genomic Regulation (CRG)"
 author = "Luca Cozzuto, Toni Hermoso Pulido"
 
-version = "v2025"
+version = "2025"
 release = version
 
 # -- General configuration ---------------------------------------------------
