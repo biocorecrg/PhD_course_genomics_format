@@ -45,4 +45,6 @@ the_end.md
 
 ```
 
-.. bioschemas:: bioschemas.yaml
+```{bioschemas} ./bioschemas.yaml
+
+```
