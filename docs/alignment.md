@@ -32,7 +32,7 @@ cd .. # go up one level to the root of the project, if needed
 mkdir alignment
 cd alignment
 
-wget https://biocorecrg.github.io/PhD_course_genomics_format/{data_version}/data/H3K4me1.sam.gz
+wget https://biocorecrg.github.io/PhD_course_genomics_format/{{data_version}}/data/H3K4me1.sam.gz
 gunzip H3K4me1.sam.gz
 
 more H3K4me1.sam
@@ -85,7 +85,7 @@ Converting SAM to BAM is really useful to save disk space and to quickly access 
 To convert SAM to BAM, sort, index, etc. you can use the program: [**samtools**](http://samtools.sourceforge.net/).
 
 ```bash
-wget https://biocorecrg.github.io/PhD_course_genomics_format/{data_version}/data/H3K4me1.bam
+wget https://biocorecrg.github.io/PhD_course_genomics_format/{{data_version}}/data/H3K4me1.bam
 
 ```
 
