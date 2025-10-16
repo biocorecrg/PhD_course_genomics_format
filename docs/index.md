@@ -29,7 +29,7 @@ You need to have a GitHub account.
 
 ```{toctree}
 :hidden:
-:depth: 2
+:maxdepth: 2
 
 why.md
 formats.md

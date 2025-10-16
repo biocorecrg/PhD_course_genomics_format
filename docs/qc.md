@@ -12,7 +12,7 @@ FastQC outputs two files:
 <br>
 Let's create in the root of the project the folder **fastqc**, download there the html file and display the results in an Internet browser; e.g., Firefox, using command **firefox**:
 
-```{bash}
+```bash
 cd .. # make sure to move up in the root of the project folder
 mkdir fastqc
 cd fastqc
@@ -24,7 +24,7 @@ firefox H3K4me1_chr21_fastqc.html
 
 **NOTE**. If you don't have X11 forwarding, don't worry. Just copy paste this link in your browser:
 
-```{bash}
+```bash
  https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_chr21_fastqc.html
 ```
 

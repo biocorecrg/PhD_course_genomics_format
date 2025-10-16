@@ -33,7 +33,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "furo"
-html_static_path = ["_static"]
+# html_static_path = ["_static"]
 
 html_theme_options = {
     "footer_icons": [
@@ -53,7 +53,7 @@ html_theme_options = {
     "source_directory": "docs/",
 }
 myst_enable_extensions = ["substitution"]
-myst_substitutions = {"data_version": "latest"}
+# myst_substitutions = {"data_version": "latest"}
 
 import os
 
