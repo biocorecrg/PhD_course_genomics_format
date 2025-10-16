@@ -26,7 +26,7 @@ There is a standard format for the alignment called SAM format.
 
 The format Sequence Alignment/Map Format [**SAM format**](https://samtools.github.io/hts-specs/SAMv1.pdf) is plain text and can be displayed like a normal file:
 
-```{bash}
+```bash
 pwd # check where you are located in the folder structure
 cd .. # go up one level to the root of the project, if needed
 mkdir alignment
@@ -84,7 +84,7 @@ The **BAM format** is a compressed version of the SAM format (plain text) and ca
 Converting SAM to BAM is really useful to save disk space and to quickly access the data: indeed, the BAM format can be sorted and indexed. <br>
 To convert SAM to BAM, sort, index, etc. you can use the program: [**samtools**](http://samtools.sourceforge.net/).
 
-```{bash}
+```bash
 wget https://biocorecrg.github.io/PhD_course_genomics_format/{data_version}/data/H3K4me1.bam
 
 ```
