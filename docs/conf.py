@@ -53,6 +53,8 @@ html_theme_options = {
     "source_directory": "docs/",
 }
 
+myst_substitutions = {"data_version": "latest"}
+
 import os
 
 from sphinx.util.fileutil import copy_asset
