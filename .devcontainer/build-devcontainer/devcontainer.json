@@ -1,0 +1,27 @@
+{
+    "name": "phd_genomics_format-devcontainer-build",
+
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "../.."
+    },
+
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.3": {}
+    },
+
+    "remoteEnv": {
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+    },
+
+    "remoteUser": "root",
+    "privileged": true,
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+
+        }
+    }
+}

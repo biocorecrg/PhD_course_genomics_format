@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Customise the terminal command prompt
+echo "export PROMPT_DIRTRIM=2" >>$HOME/.bashrc
+echo "export PS1='\[\e[3;36m\]\w ->\[\e[0m\\] '" >>$HOME/.bashrc
+export PROMPT_DIRTRIM=2
+export PS1='\[\e[3;36m\]\w ->\[\e[0m\\] '
+
+# Update welcome message
+echo "Welcome to the Genomics Formats Course!" >/usr/local/etc/vscode-dev-containers/first-run-notice.txt

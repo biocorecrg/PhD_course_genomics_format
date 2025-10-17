@@ -1,0 +1,20 @@
+{
+    "name": "PhD_course_genomics_format",
+    "image": "ghcr.io/PhD_course_genomics_format/devcontainer:latest",
+
+    "remoteEnv": {
+        // Workspace path on the host for mounting with docker-outside-of-docker
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+    },
+
+    "onCreateCommand": "./.devcontainer/setup.sh",
+
+    "remoteUser": "root",
+    "privileged": true,
+
+    "hostRequirements": {
+        "cpus": 1,
+        "memory": "2gb",
+        "storage": "8gb"
+    }
+}
