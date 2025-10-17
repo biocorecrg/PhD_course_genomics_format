@@ -6,11 +6,6 @@ on:
       - main
     paths:
       - '.devcontainer/build-devcontainer/**'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - '.devcontainer/build-devcontainer/**'
   workflow_dispatch:
 
 permissions:
