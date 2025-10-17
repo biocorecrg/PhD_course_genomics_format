@@ -6,3 +6,7 @@ ChIP-seq stands for: **Ch**romatin **I**mmuno **P**recipitation followed by mass
 The proteins targeted in such analysis are typically transcription factors, modified histones, polymerases or proteins able to chemically modify DNA or histones.
 
 <a href="https://en.wikipedia.org/wiki/ChIP-sequencing"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Chromatin_immunoprecipitation_sequencing.svg" width="800"/>
+
+```{bioschemas} ./bioschemas.yaml
+
+```

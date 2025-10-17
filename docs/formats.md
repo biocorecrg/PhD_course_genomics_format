@@ -20,3 +20,7 @@ But sometimes is not enough for describing completely the new kind of data and s
 <br>
 
 <img src="images/standards_2x.png" width="800"/>
+
+```{bioschemas} ./bioschemas.yaml
+
+```

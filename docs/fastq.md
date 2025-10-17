@@ -317,4 +317,6 @@ We can then more easily manipulate the **sequences** themselves.
 - How many lines and reads are in the file with the input data?
 - Do it using **paste** and **cut** and then **grep** and **wc**.
 
-<br><br>
+```{bioschemas} ./bioschemas.yaml
+
+```

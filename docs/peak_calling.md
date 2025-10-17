@@ -139,3 +139,7 @@ awk -F"\t" '{if ($9>=2) print}' H3K4me_peaks.narrowPeak | wc -l
 - How many peaks in the file H3K4me_peaks.narrowPeak have fold enrichment larger than 5 ?
 
  <br>
+
+```{bioschemas} ./bioschemas.yaml
+
+```

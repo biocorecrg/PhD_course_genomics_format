@@ -52,3 +52,7 @@ Once submitted let's change the display to **Display Mode** -> **FULL** and clic
 You will see the coverage of your mapped reads together with the called peaks.
 
 <img src="images/bam_gb.png" width="900"/>
+
+```{bioschemas} ./bioschemas.yaml
+
+```

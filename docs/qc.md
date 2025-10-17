@@ -36,4 +36,6 @@ Below is an example of a poor quality dataset. As you can see, the average quali
 
 <img src="images/bad_fastqc.png" width="800"/>
 
-<br>
+```{bioschemas} ./bioschemas.yaml
+
+```

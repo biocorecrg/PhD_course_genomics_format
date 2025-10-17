@@ -115,3 +115,7 @@ grep -E A{40} H3K4me1.sam
  <br>
  
 </details>
+
+```{bioschemas} ./bioschemas.yaml
+
+```

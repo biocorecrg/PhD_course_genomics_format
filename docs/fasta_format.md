@@ -183,4 +183,6 @@ Download in the folder ./db the annotation file at https://biocorecrg.github.io/
 - How many characters the first line of the file contains?
 - How many characters the lines starting with # contain?
 
- <br>
+```{bioschemas} ./bioschemas.yaml
+
+```
