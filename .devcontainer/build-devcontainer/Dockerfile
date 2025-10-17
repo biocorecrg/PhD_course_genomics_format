@@ -1,4 +1,5 @@
-FROM ubuntu:24.04
+#FROM ubuntu:24.04
+FROM mcr.microsoft.com/devcontainers/universal:noble
 
 RUN apt update && apt install -y \
     curl \
