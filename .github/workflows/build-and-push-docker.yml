@@ -39,6 +39,6 @@ jobs:
           file: .devcontainer/build-devcontainer/Dockerfile
           push: true
           tags: |
-            ghcr.io/PhD_course_genomics_format/devcontainer:latest
-            ghcr.io/PhD_course_genomics_format/devcontainer:${{ github.sha }}
+            ghcr.io/phd_course_genomics_format/devcontainer:latest
+            ghcr.io/phd_course_genomics_format/devcontainer:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
