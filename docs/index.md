@@ -22,10 +22,6 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 
 - The CRG course "Intro to basic Linux commands".
 
-## Using GitPod
-
-You need to have a GitHub account.
-[GITPOD](https://gitpod.io/#https://github.com/biocorecrg/PhD_course_genomics_format)
 
 ```{toctree}
 :hidden:
