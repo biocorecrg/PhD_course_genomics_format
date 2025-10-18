@@ -1,7 +1,8 @@
 {
     "name": "PhD_course_genomics_format",
+    // We could build the container, but rather use an existing image
     "image": "ghcr.io/biocorecrg/phd_course_genomics_format/devcontainer:latest",
-
+    
     "remoteEnv": {
         // Workspace path on the host for mounting with docker-outside-of-docker
         "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
@@ -11,10 +12,18 @@
 
     "remoteUser": "root",
     "privileged": true,
-
+    // Adjust below
     "hostRequirements": {
         "cpus": 1,
         "memory": "2gb",
         "storage": "8gb"
+    },
+    "customizations": {
+        "vscode": {
+          "extensions": [
+            "shd101wyy.markdown-preview-enhanced",
+            "yzhang.markdown-all-in-one"
+          ]
+        }
     }
 }
