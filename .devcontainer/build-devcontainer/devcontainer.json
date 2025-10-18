@@ -21,7 +21,10 @@
     "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {
-
+            "extensions": [
+                "shd101wyy.markdown-preview-enhanced",
+                "yzhang.markdown-all-in-one"
+            ]
         }
     }
 }
