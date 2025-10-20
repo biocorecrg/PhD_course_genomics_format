@@ -10,3 +10,9 @@ Then you can go to the repository and click on **Codespace** and click on **Crea
 
 <br/>
 
+Then you should see something some this: 
+
+<img src="images/codespace.png" width="800"/>
+
+
+Now you are good to go!
