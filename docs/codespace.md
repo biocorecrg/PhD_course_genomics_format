@@ -6,13 +6,17 @@ First, you need to subscribe to GitHub if you don't have an account. You can do 
 
 Then you can go to the repository and click on **Codespace** and click on **Create codespace on main**.  
 
+<br/>
+
 <img src="images/codespace.png" width="800"/>
 
 <br/>
 
 Then you should see something some this: 
 
-<img src="images/codespace.png" width="800"/>
+<br/>
+
+<img src="images/codespace2.png" width="800"/>
 
 
 Now you are good to go!
