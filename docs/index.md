@@ -29,6 +29,7 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 
 why.md
 formats.md
+codespace.md
 chipseq.md
 fastq.md
 qc.md
