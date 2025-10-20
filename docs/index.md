@@ -21,7 +21,7 @@ Materials for the course are available at [this website](https://biocorecrg.gith
 ## Prerequisites
 
 - The CRG course "Intro to basic Linux commands".
-
+- A GitHub account. You can create it one [here](https://github.com/signup?source=login)
 
 ```{toctree}
 :hidden:
