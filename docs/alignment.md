@@ -7,7 +7,7 @@ Like the index at the end of a book, an index of a large DNA sequence allows one
 
 |                                                                   |
 | :---------------------------------------------------------------: |
-| <img src="images/index_example.png" width="300" align="middle" /> |
+| <img src="images/index_example.png" width="300" align="center" /> |
 
 <br/>
 

@@ -4,7 +4,7 @@ Once sequencing reads quality is ensured, we can proceed with their mapping (aka
 
 |                    Mapping of short reads                     |
 | :-----------------------------------------------------------: |
-| <img src="images/alignment.png" width="500" align="middle" /> |
+| <img src="images/alignment.png" width="500" align="center" /> |
 
 <br>
 
@@ -31,7 +31,7 @@ We need two files:
 
 |                        GENCODE website                        |
 | :-----------------------------------------------------------: |
-| <img src="images/gencode_1.png" width="800" align="middle" /> |
+| <img src="images/gencode_1.png" width="800" align="center" /> |
 
 ## FASTA formats
 
