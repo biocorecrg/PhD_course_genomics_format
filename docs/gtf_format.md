@@ -76,9 +76,9 @@ That is why we used the command **cut -d"\""** where backslash (\) is used as an
 
 - How many lncRNA genes are in the file annotation.gtf.gz?
 
-<br>
-TIP: Command **cut** can be used with different one-character separators and applied to different columns many times in a sequence via pipe.
-<br>
+:::{tip}
+Command **cut** can be used with different one-character separators and applied to different columns many times in a sequence via pipe.
+:::
 
 ```{bioschemas} ./bioschemas.yaml
 

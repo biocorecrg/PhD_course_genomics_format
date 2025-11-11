@@ -133,15 +133,17 @@ ls -lh H3K4me1_chr21.fq.gz
 - Download the **control file for this ChIP-seq experiment** at https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/input_chr21.fq.gz <br>
 - What is the size of the input file?
 - Look up for the options of the command **ls** using the command **man ls**.
-- Which option in command **ls** allows to display files sorted by size? 
-- Which option in command **ls** allows to display files sorted by size from smallest to largest? 
-- Which option in command **ls** allows to display files sorted by the modification time? 
-- How to display the files in the order of modification from th earliest to latest? 
+- Which option in command **ls** allows to display files sorted by size?
+- Which option in command **ls** allows to display files sorted by size from smallest to largest?
+- Which option in command **ls** allows to display files sorted by the modification time?
+- How to display the files in the order of modification from th earliest to latest?
 - Create the folder **data** and move downloaded files there using **mv** command.
 - Go to the folder **data** to see its content, using command **ls**.
 - Write README.txt in ./data folder describing how you obtained the files.
-  **TIP**: To quit command **man** use the key **Q** on the keyboard.
-  <br/>
+
+:::{tip}
+To quit command **man** use the key **Q** on the keyboard.
+:::
 
 Let's explore the fastq file using the **pipe** and the Linux commands **zcat**, **head**, **tail** and **more**.<br>
 
