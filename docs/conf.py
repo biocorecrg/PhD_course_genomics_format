@@ -6,6 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import os
+
+from myst_parser import __version__
+from sphinx.application import Sphinx
+from sphinx.util.fileutil import copy_asset
+
 project = "Genomics Data Formats"
 copyright = "2022-2025, Centre for Genomic Regulation (CRG)"
 author = "Luca Cozzuto, Toni Hermoso Pulido"
@@ -53,11 +59,8 @@ html_theme_options = {
     "source_directory": "docs/",
 }
 myst_enable_extensions = ["html_admonition", "substitution"]
+myst_enable_checkboxes = True
 # myst_substitutions = {"data_version": "latest"}
-
-import os
-
-from sphinx.util.fileutil import copy_asset
 
 
 def copy_assets(app, exception):
@@ -70,5 +73,11 @@ def copy_assets(app, exception):
             copy_asset(src, dst)
 
 
-def setup(app):
+def setup(app: Sphinx):
+    """Add functions to the Sphinx setup."""
+    from myst_parser._docs import (
+        MystAdmonitionDirective,
+    )
+
+    app.add_directive("myst-admonitions", MystAdmonitionDirective)
     app.connect("build-finished", copy_assets)
