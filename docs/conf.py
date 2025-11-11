@@ -58,7 +58,13 @@ html_theme_options = {
     "source_branch": "main",
     "source_directory": "docs/",
 }
-myst_enable_extensions = ["colon_fence", "html_admonition", "substitution"]
+myst_enable_extensions = [
+    "colon_fence",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    "substitution",
+]
 myst_enable_checkboxes = True
 # myst_substitutions = {"data_version": "latest"}
 
