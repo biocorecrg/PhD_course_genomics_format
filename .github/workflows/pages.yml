@@ -23,6 +23,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # fetch full history so tags and all refs are available
+          fetch-depth: 0
+          # optionally ensure tags are fetched (fetch-depth: 0 should already include tags)
+          fetch-tags: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
