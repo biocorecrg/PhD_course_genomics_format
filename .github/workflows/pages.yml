@@ -42,6 +42,7 @@ jobs:
 
           # Build for each tag
           tags="$(git tag -l)"
+          echo "$tags"
           if [ -z "$tags" ]; then
             echo "No tags found."
           else
