@@ -19,6 +19,16 @@ author = "Luca Cozzuto, Toni Hermoso Pulido"
 version = "2025"
 release = version
 
+# -- Matomo configuration ---------------------------------------------------
+
+matomo_url = "//stats.biocore.crg.eu/"
+matomo_site_id = "24"
+
+html_context = {
+    "matomo_url": matomo_url,
+    "matomo_site_id": matomo_site_id,
+}
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
