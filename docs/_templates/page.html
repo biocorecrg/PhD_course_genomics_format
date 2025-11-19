@@ -1,4 +1,7 @@
-{% if matomo_url and matomo_site_id %}
+<!-- filepath: _templates/layout.html -->
+{% extends "furo/page.html" %}
+{% block scripts %}
+{{ super() }}
 <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
@@ -13,4 +16,4 @@
   })();
 </script>
 <!-- End Matomo Code -->
-{% endif %}
+{% endblock %}
