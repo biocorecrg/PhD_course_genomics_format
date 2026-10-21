@@ -6,7 +6,7 @@
 
 |                                 [Luca Cozzuto](mailto:luca.cozzuto@crg.eu)                                 |                                [Fabian Andrade](mailto:fabian.andrade@crg.eu)                              |
 | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-| <a href="https://biocore.crg.eu/wiki/User:Lcozzuto"><img src="images/pics/lcozzuto.jpg" width="200"/> </a> |                                                                                                            |
+| <a href="https://biocore.crg.eu/wiki/User:Lcozzuto"><img src="images/pics/lcozzuto.jpg" width="200"/> </a> | <img src="images/pics/Fabian_Andrade.jpeg" width="200"/> |
 
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 425, 4th floor of the hospital side)
 
