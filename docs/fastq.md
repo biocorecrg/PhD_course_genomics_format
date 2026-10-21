@@ -42,10 +42,10 @@ It is recommended to always use the date at the beginning of the folder name, in
 <br>
 
 ```bash
-mkdir 2025-10-22-genomics_data_formats
+mkdir 2026-10-26-genomics_data_formats
 
 # type cd 2[TAB] to autofill the folder name
-cd 2025-10-25-genomics_data_formats
+cd 2026-10-26-genomics_data_formats
 ```
 
 <br>
@@ -56,7 +56,7 @@ Let's use command **cat** to create a simple README.txt
 
 ```bash
 cat > README.txt
-Date: 22/10/2025
+Date: 26/10/2026
 Author: ....
 Project title: This is my first project.
 ```
@@ -103,6 +103,12 @@ Download a **test dataset** by executing the command **wget**:
 
 ```bash
 wget https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_chr21.fq.gz
+```
+
+<details>
+<summary>Click to see expected wget output</summary>
+
+```text
 --2019-10-15 14:42:59--  https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_chr21.fq.gz
 Resolving biocorecrg.github.io (biocorecrg.github.io)... 185.199.109.153, 185.199.111.153, 185.199.110.153, ...
 Connecting to biocorecrg.github.io (biocorecrg.github.io)|185.199.109.153|:443... connected.
@@ -112,9 +118,10 @@ Saving to: ‘H3K4me1_chr21.fq.gz’
 
 100%[======================================================================================>] 17,587,112  37.7MB/s   in 0.4s
 
-2019-10-15 14:43:01 (37.7 MB/s) - ‘H3K4me1_chr21.fq.gz’ saved [17587112/17587112]`
-
+2019-10-15 14:43:01 (37.7 MB/s) - ‘H3K4me1_chr21.fq.gz’ saved [17587112/17587112]
 ```
+
+</details>
 
 <br>
 
@@ -122,7 +129,10 @@ Now, let's check the **size of the donwloaded file** (the file has an extension 
 
 ```bash
 ls -lh H3K4me1_chr21.fq.gz
+```
 
+Output:
+```text
 -rw-r--r-- 1 lcozzuto Bioinformatics_Unit 17M Oct 15 14:19 H3K4me1_chr21.fq.gz
 ```
 
@@ -153,8 +163,8 @@ Let's explore the fastq file using the **pipe** and the Linux commands **zcat**,
 Command **head** by default outputs the first 10 lines of the file; to output a specified number of lines, we can use the option **-n**:
 
 ```bash
-zcat H3K4me1_chr21.fq.gz | head
-zcat H3K4me1_chr21.fq.gz | head -n 4
+zcat H3K4me1_chr21.fq.gz | head
+zcat H3K4me1_chr21.fq.gz | head -n 4
 ```
 
 <br/>
@@ -191,7 +201,7 @@ While viewing the text file using **more**, use these controls:
 
 ```bash
 
-zcat H3K4me1_chr21.fq.gz | more
+zcat H3K4me1_chr21.fq.gz | more
 ```
 
 <br>
@@ -199,8 +209,11 @@ zcat H3K4me1_chr21.fq.gz | more
 Let's check how many lines are in this file, using command **wc**:
 
 ```bash
-zcat H3K4me1_chr21.fq.gz | wc -l
+zcat H3K4me1_chr21.fq.gz | wc -l
+```
 
+Output:
+```text
 2089260
 ```
 
@@ -213,19 +226,21 @@ This can be done, using the **Linux shell variables (they are created using '=' 
 ```bash
 echo $((10*10-5))
 
-
 num=$(zcat H3K4me1_chr21.fq.gz | wc -l)
 echo $num
 
+echo $((2089260/4))
+
+echo $((num/4)); echo $num
+```
+
+Output:
+```text
+95
 2089260
-
-$((2089260/4))
-
 522315
-
-$((num/4)); echo $num
-
 522315
+2089260
 ```
 
 <br>
@@ -234,11 +249,12 @@ Another way to do arithmetic and manipulation with files in Linux is using the s
 
 ```bash
 zcat H3K4me1_chr21.fq.gz | awk '{num++} END{print num}'
-
-2089260
-
 zcat H3K4me1_chr21.fq.gz | awk '{num++} END{print num/4}'
+```
 
+Output:
+```text
+2089260
 522315
 ```
 
@@ -301,14 +317,14 @@ Here, command **paste**, used this way, **combines N consecutive lines into one 
 
 **WARNING** For MAC OSX users the command line for zcat is a bit different. You need to redirect the STDIN to the command zcat:
 
-```
-zcat < H3K4me1_chr21.fq.gz | ...
+```bash
+zcat < H3K4me1_chr21.fq.gz | head
 ```
 
 In the same way we can replace the command zcat with **gunzip** plus the option **-c** for redirecting the extraction to STDOUT.
 
-```
-gunzip -c H3K4me1_chr21.fq.gz | ...
+```bash
+gunzip -c H3K4me1_chr21.fq.gz | head
 ```
 
 We can then more easily manipulate the **sequences** themselves.

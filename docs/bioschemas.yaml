@@ -17,13 +17,11 @@ author:
   "@id": https://orcid.org/0000-0003-3194-8892
   url: https://orcid.org/0000-0003-3194-8892
 - "@type": Person
-  name: "Toni Hermoso Pulido"
-  "@id": https://orcid.org/0000-0003-2016-6465
-  url: https://orcid.org/0000-0003-2016-6465
+  name: "Fabian Andrade"
 - "@type": Organization
   name: "Centre for Genomic Regulation"
   "@id": https://ror.org/03wyzt892
   url: https://www.crg.eu
-dateModified: 2025-10-23
+dateModified: 2026-10-26
 description: Short course for learning common genomics data formats (FASTA, FASTQ, GTF, BED, SAM/BAM), establishing a computational project's folder structure and navigation, and gaining proficiency in exploring, parsing, and manipulating these files using essential Linux commands
 keywords: "genomics, linux, bioinformatics"

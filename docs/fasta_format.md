@@ -40,8 +40,7 @@ To speed up the mapping process, we already downloaded FASTA file for human v32 
 Download it to the folder **db** of your project:
 
 ```bash
-pwd # to check where you are in the folder structure
-cd ../ # to go to the root of the project folder, if needed
+cd ~/2026-10-26-genomics_data_formats # go to the root of the project folder
 mkdir db
 cd db
 
@@ -52,7 +51,10 @@ The genome is generally represented as a FASTA file (.fa file). Each chromosome 
 
 ```bash
 zcat Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz | head -n 5
+```
 
+Output:
+```text
 >chr21 dna:chromosome chromosome:GRCh38:21:1:46709983:1 REF
 NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN

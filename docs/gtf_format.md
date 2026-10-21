@@ -16,10 +16,14 @@ The genomic annotation is stored in **G**eneral **T**ransfer **F**ormat (**GTF**
 |             8 | frame       | One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on.. |
 |             9 | attribute   | A semicolon-separated list of tag-value pairs, providing additional information about each feature.                                                                       |
 
-Check the first rows of the annotation file:
+Make sure you are in the folder `db` (`cd ~/2026-10-26-genomics_data_formats/db`), then check the first rows of the annotation file:
 
 ```bash
 zcat annotation.gtf.gz | head
+```
+
+Output:
+```text
 ##description: evidence-based annotation of the human genome (GRCh38), version 32 (Ensembl 98)
 ##provider: GENCODE
 ##contact: gencode-help@ebi.ac.uk
@@ -36,6 +40,10 @@ Let's check how many genes are in the annotation file:
 
 ```bash
 zcat annotation.gtf.gz | grep -v "#" | awk '$3=="gene"' | wc -l
+```
+
+Output:
+```text
 872
 ```
 

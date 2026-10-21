@@ -13,10 +13,10 @@ from sphinx.application import Sphinx
 from sphinx.util.fileutil import copy_asset
 
 project = "Genomics Data Formats"
-copyright = "2022-2025, Centre for Genomic Regulation (CRG)"
-author = "Luca Cozzuto, Toni Hermoso Pulido"
+copyright = "2022-2026, Centre for Genomic Regulation (CRG)"
+author = "Luca Cozzuto, Fabian Andrade"
 
-version = "2025"
+version = "2026"
 release = version
 
 # -- Matomo configuration ---------------------------------------------------

@@ -5,7 +5,7 @@ The genome browsers like [UCSC Genome Browser](https://genome.ucsc.edu/) and [En
 For example, you can load BED and GTF files and display them in the genomic context. So you can know where a ChIP-seq peaks are located in the genome.
 <br>
 
-Let's first convert our 9-field bed file in a more standard 6-field one:
+Make sure you are in the folder `peaks` (`cd ~/2026-10-26-genomics_data_formats/peaks`), then convert our 9-field bed file to a standard 6-field one:
 
 ```bash
 cut -f 1-6 H3K4me_peaks.narrowPeak > H3K4me_peaks.bed
@@ -35,11 +35,11 @@ You can see it as black bar in the genome browser.
 
 <img src="images/peaks_gb.png" width="900"/>
 
-You can also display aligned sequences, but you need to place your sorted and indexed bam files in a web-server. Then you can just paste the corresponding web-link into the same **custom track** space to let the browser directly fecth the needed informations on the fly.
+You can also display aligned sequences, but you need to place your sorted and indexed bam files in a web-server. Then you can just paste the corresponding web-link into the same **custom track** space to let the browser directly fetch the needed information on the fly.
 
 Copy paste this link into the **custom track**. This is the sorted version of our alignment, hosted in the github web-server.
 
-```bash
+```text
 https://biocorecrg.github.io/PhD_course_genomics_format/latest/data/H3K4me1_s.bam
 ```
 
