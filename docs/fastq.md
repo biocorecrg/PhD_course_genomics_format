@@ -61,16 +61,16 @@ Author: ....
 Project title: This is my first project.
 ```
 
-<br>
+
 Use the keys Enter and then Ctr-D to get out of cat.
-<br>
+
 
 Explore your new file using **more**.
 To quit command **more**, use the key **Q** on the keyboard.<br/><br/>
 
-<br>
+
 We forgot to write down the goal of the project.
-We can append a new line to an existing file using **cat** and redirection **>>**:
+We can append a new line to an existing file using **cat** and redirection **>>** :
 
 ```bash
 cat >> README.txt
