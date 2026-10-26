@@ -18,11 +18,11 @@ The program which maps reads to a genome or transcriptome (called an **aligner**
 - [Ensembl](https://www.ensembl.org/index.html) contains both automatically generated and manually curated annotations. They host different genomes and also **comparative genomics data** and **variants**. [Ensembl genomes](http://ensemblgenomes.org/) extends the genomic information across different taxonomic groups: bacteria, fungi, metazoa, plants, protists. Ensembl integrates also a genome browser.
 - [UCSC Genome Browser](https://genome.ucsc.edu/) hosts information about different genomes. It integrates the GENCODE information as additional tracks.
 
-<br>
-We will use GENCODE for performing mapping to the human genome. <br> Let's retrieve the data that we will use.
-<br>
-In GENCODE, we will be using the version [v32 of the human genome](https://www.gencodegenes.org/human/release_32.html). 
-<br>
+We will use GENCODE for performing mapping to the human genome.
+
+Let's retrieve the data that we will use.
+
+In GENCODE, we will be using the version [v32](https://www.gencodegenes.org/human/release_32.html).
 
 We need two files:
 
